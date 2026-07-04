@@ -20,7 +20,7 @@ A Cheat Engine table containing a collection of scripts that will enable a free 
 
 #### Notes:
 
- - The table should work with both 1.x and 2.x versions of the emulator.
+ - While compatible with 1.x and 0.x versions of the emulator, I **don't** guaranteed any of the scripts in the table will work.
 
  - Games currently supported:
 	
