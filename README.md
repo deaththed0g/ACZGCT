@@ -8,7 +8,7 @@ A Cheat Engine table containing a collection of scripts that will enable a free 
 
 #### Required files and tools:
 
-- Cheat Engine 7.0 or latest installed in your computer. You can download the program from its [official website](https://www.cheatengine.org/).
+- Cheat Engine 7.7 or latest installed in your computer. You can download the program from its [official website](https://www.cheatengine.org/).
 
 - PCSX2 ([official website](https://pcsx2.net/downloads/)) **[See NOTES]**.
 
