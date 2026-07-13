@@ -20,7 +20,7 @@ A revamp of the original table I released for Ace Combat Zero: The Belkan War, u
 
 #### Notes:
 
- - While compatible with 1.x and 0.x versions of the emulator, I **don't** guaranteed any of the scripts in the table will work.
+ - The scripts are compatible with the deprecated versions of the PCSX2 (v0.x and v1.x), **_but I don't guaranteed they will work._**
 
  - Games currently supported:
 	
