@@ -1,6 +1,6 @@
 # Ace Combat Zero: The Belkan War - General cheat table
 
-A revamp of the original table I released for Ace Combat Zero: The Belkan War, using the [Ace Combat 5: The Unsung War - General cheat table](https://github.com/deaththed0g/AC5GCT) table as a base template.
+A revamp of the original table I released for Ace Combat Zero: The Belkan War, using the [Ace Combat 5: The Unsung War - General cheat table](https://github.com/deaththed0g/AC5GCT) table as a base template. Contains scripts that will let you control the camera and change some gameplay aspects.
 
 #### Download links:
 
