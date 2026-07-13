@@ -6,7 +6,7 @@
 ===================================================================
 By death_the_d0g (death_the_d0g @ Twitter and deaththed0g @ Github)
 This script was written and is best viewed on Notepad++.
-v120726
+v130726
 
 Credit to anonymous from CE forums for their debugger handling code.
 ]]
@@ -453,6 +453,13 @@ function switch(bool)
 
 	else
 
+		-- Restore camera opcodes
+		for i = 1, #ACZfreecamGameplayAOB_dataList,2 do
+
+			writeBytes(ACZfreecamGameplayAOB_dataList[i], ACZfreecamGameplayAOB_dataList[i + 1])
+
+		end
+
 		-- Restore screen projection default values.
 		writeBytes(ACZfreecamGameplay_dataList[3], ACZfreecamGameplay_dataList[4])
 		writeBytes(ACZfreecamGameplay_dataList[5], ACZfreecamGameplay_dataList[6])
@@ -467,35 +474,21 @@ function switch(bool)
 		writeBytes(ACZfreecamGameplay_dataList[13], ACZfreecamGameplay_dataList[14])
 		writeBytes(ACZfreecamGameplay_dataList[15], ACZfreecamGameplay_dataList[16])
 
-		-- Restore camera opcodes
-		for i = 1, #ACZfreecamGameplayAOB_dataList,2 do
-
-			writeBytes(ACZfreecamGameplayAOB_dataList[i], ACZfreecamGameplayAOB_dataList[i + 1])
-
-		end
-
 		-- Restore HUD and pause menu graphics
 		writeBytes(EERAMver_ACZfreecamGameplay[2] + 0x3FFBCF, 0x01)
 		writeInteger(EERAMver_ACZfreecamGameplay[2] + 0x3FC7DC, 7753432)
 
 		-- Restore camera coordinates.
-		if readBytes(ACZfreecamGameplay_dataList[1][1] - 0x2A7, 1) == 2 then -- If cockpit view camera.
-
-			writeBytes(ACZfreecamGameplay_dataList[1][7], ACZfreecamGameplay_dataList[2][7])
-			writeBytes(ACZfreecamGameplay_dataList[1][8], ACZfreecamGameplay_dataList[2][8])
-			writeBytes(ACZfreecamGameplay_dataList[1][9], ACZfreecamGameplay_dataList[2][9])
-
-		else
-
-			writeBytes(ACZfreecamGameplay_dataList[1][1], ACZfreecamGameplay_dataList[2][1])
-			writeBytes(ACZfreecamGameplay_dataList[1][2], ACZfreecamGameplay_dataList[2][2])
-			writeBytes(ACZfreecamGameplay_dataList[1][3], ACZfreecamGameplay_dataList[2][3])
-			writeBytes(ACZfreecamGameplay_dataList[1][4], ACZfreecamGameplay_dataList[2][4])
-			writeBytes(ACZfreecamGameplay_dataList[1][5], ACZfreecamGameplay_dataList[2][5])
-			writeBytes(ACZfreecamGameplay_dataList[1][6], ACZfreecamGameplay_dataList[2][6])
-
-		end
-
+		writeBytes(ACZfreecamGameplay_dataList[1][7], ACZfreecamGameplay_dataList[2][7])
+		writeBytes(ACZfreecamGameplay_dataList[1][8], ACZfreecamGameplay_dataList[2][8])
+		writeBytes(ACZfreecamGameplay_dataList[1][9], ACZfreecamGameplay_dataList[2][9])
+		writeBytes(ACZfreecamGameplay_dataList[1][1], ACZfreecamGameplay_dataList[2][1])
+		writeBytes(ACZfreecamGameplay_dataList[1][2], ACZfreecamGameplay_dataList[2][2])
+		writeBytes(ACZfreecamGameplay_dataList[1][3], ACZfreecamGameplay_dataList[2][3])
+		writeBytes(ACZfreecamGameplay_dataList[1][4], ACZfreecamGameplay_dataList[2][4])
+		writeBytes(ACZfreecamGameplay_dataList[1][5], ACZfreecamGameplay_dataList[2][5])
+		writeBytes(ACZfreecamGameplay_dataList[1][6], ACZfreecamGameplay_dataList[2][6])
+		
 		-- Restore control input
 		writeBytes(EERAMver_ACZfreecamGameplay[2] + 0x3F70B8, 0x30, 0x7D, 0x69, 0x00, 0xC0, 0x7D, 0x69, 0x00)
 
